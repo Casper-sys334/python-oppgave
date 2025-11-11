@@ -54,5 +54,12 @@ def finnIp():
         result = os.popen("ifconfig").read()
     return result
 
+
+def henteApper():
+    os.system("wmic product get name > programmer.txt")
+    fil = open("programmer.txt" , "r")
+    programmer = fil.read()
+    return programmer
+
 if __name__ == '__main__':
     main()
