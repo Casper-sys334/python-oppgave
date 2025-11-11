@@ -61,5 +61,9 @@ def henteApper():
     programmer = fil.read()
     return programmer
 
+def mappe():
+    if not os.path.isdir("C:/maskin/"):
+        os.mkdir("C:/maskin/")
+        
 if __name__ == '__main__':
     main()
