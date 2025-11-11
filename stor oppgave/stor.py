@@ -42,5 +42,10 @@ def Disk():
             print("Ukjent OS-type")
     return f"{ledig / giga:.2f}"
 
+
+def bruker():
+    return os.getlogin()
+
+
 if __name__ == '__main__':
     main()
