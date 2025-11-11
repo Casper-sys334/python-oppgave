@@ -29,5 +29,18 @@ def operativsystem():
     return {"operativsystemet":operativsystemet, "versjon":versjon}
 
 
+
+def Disk():
+    giga = 1024 * 1024 * 1024
+
+    match os.name:
+        case "nt": 
+            total, brukt, ledig = shutil.disk_usage("C:\\")
+        case "posix":
+           total, brukt, ledig = shutil.disk_usage("/")
+        case _:
+            print("Ukjent OS-type")
+    return f"{ledig / giga:.2f}"
+
 if __name__ == '__main__':
     main()
