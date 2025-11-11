@@ -46,6 +46,13 @@ def Disk():
 def bruker():
     return os.getlogin()
 
+def finnIp():
+    result = ""
+    if os.name == "nt":
+        result = os.popen("ipconfig").read()
+    else:
+        result = os.popen("ifconfig").read()
+    return result
 
 if __name__ == '__main__':
     main()
